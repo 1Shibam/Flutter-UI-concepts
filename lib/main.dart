@@ -1,8 +1,10 @@
 // ignore_for_file: unused_import
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_ui_concepts/widgest/alert_dialogue_box.dart';
 import 'package:flutter_ui_concepts/widgest/animated_text_widget.dart';
+import 'package:flutter_ui_concepts/widgest/bottom_navigation_widget.dart';
 import 'package:flutter_ui_concepts/widgest/bottom_sheet.dart';
 import 'package:flutter_ui_concepts/widgest/dissmissible.dart';
 import 'package:flutter_ui_concepts/widgest/drawer_widget.dart';
@@ -10,7 +12,7 @@ import 'package:flutter_ui_concepts/widgest/image_widget.dart';
 import 'package:flutter_ui_concepts/widgest/list_grid_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const AnimatedTextWidgetExample(),
+      home: const BottomNavigationWidget(),
     );
   }
 }

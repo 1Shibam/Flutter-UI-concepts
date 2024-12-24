@@ -23,16 +23,16 @@ class _AnimatedTextWidgetExampleState extends State<AnimatedTextWidgetExample> {
               displayFullTextOnTap: true,
               isRepeatingAnimation: false,
               repeatForever: false,
-              pause: Duration(milliseconds: 4000),
+              pause: const Duration(milliseconds: 4000),
               animatedTexts: [
                 TyperAnimatedText(
                   'Shivam Jaiswal! ',
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.blue,
                     fontSize: 28,
                   ),
-                  speed: Duration(milliseconds: 30),
+                  speed: const Duration(milliseconds: 30),
                 )
               ],
             ),
