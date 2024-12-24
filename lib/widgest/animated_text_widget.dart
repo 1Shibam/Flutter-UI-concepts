@@ -17,23 +17,27 @@ class _AnimatedTextWidgetExampleState extends State<AnimatedTextWidgetExample> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             AnimatedTextKit(
               displayFullTextOnTap: true,
-            
               isRepeatingAnimation: false,
+              repeatForever: false,
+              pause: Duration(milliseconds: 4000),
               animatedTexts: [
                 TyperAnimatedText(
-                  'Shivam Jaiswal!  ',
+                  'Shivam Jaiswal! ',
                   textStyle: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.blue,
                     fontSize: 28,
                   ),
-                  speed: Duration(milliseconds: 100),
+                  speed: Duration(milliseconds: 30),
                 )
               ],
-            )
+            ),
+            AnimatedTextKit(
+                animatedTexts: [FlickerAnimatedText('You are a nigga!!')])
           ],
         ),
       ),
