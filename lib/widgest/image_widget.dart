@@ -16,7 +16,7 @@ class _ImageWidgetState extends State<ImageWidget> {
           width: 240,
           height: 300,
           decoration: BoxDecoration(
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.black,
                   spreadRadius: 6,

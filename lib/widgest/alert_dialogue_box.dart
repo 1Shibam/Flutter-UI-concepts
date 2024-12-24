@@ -17,7 +17,7 @@ class _AlertDialogueBoxState extends State<AlertDialogueBox> {
             showAlertDialog(context);
           },
           style:
-              ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.blue)),
+              const ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.blue)),
           child: const Text(
             'Show alert dialogue',
             style: TextStyle(color: Colors.black),
@@ -44,12 +44,12 @@ Future<void> showAlertDialog(BuildContext context) async {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           actions: [
-            TextButton(onPressed: () {}, child: Text('okay')),
+            TextButton(onPressed: () {}, child: const Text('okay')),
             TextButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text('cancel')),
+                child: const Text('cancel')),
           ],
         );
       });

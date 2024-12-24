@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 
 class ListGridView extends StatefulWidget {
@@ -33,7 +35,7 @@ class _ListGridViewState extends State<ListGridView> {
           children: [
             Card(
               color: Colors.blueGrey.shade200,
-              child: ListTile(
+              child: const ListTile(
                 title: Text('Apple'),
                 subtitle: Text('fruit'),
               ),
