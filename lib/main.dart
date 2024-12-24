@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_concepts/widgest/alert_dialogue_box.dart';
+import 'package:flutter_ui_concepts/widgest/animated_text_widget.dart';
 import 'package:flutter_ui_concepts/widgest/bottom_sheet.dart';
 import 'package:flutter_ui_concepts/widgest/dissmissible.dart';
 import 'package:flutter_ui_concepts/widgest/drawer_widget.dart';
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const BottomSheetWidget(),
+      home: const AnimatedTextWidgetExample(),
     );
   }
 }
