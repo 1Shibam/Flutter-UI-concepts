@@ -31,3 +31,5 @@ final thirdTextControllerProvider = Provider<TextEditingController>((ref) {
   ref.onDispose(controller.dispose);
   return controller;
 });
+final passwordVisibilityProvider = StateProvider<bool>((ref) => true
+ );
