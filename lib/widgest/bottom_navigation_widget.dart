@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final setIndexProvider = StateProvider<int>((ref) => 0);
+final setIndexProvider = StateProvider<int>((ref) => 2);
+final pageControllerProvider =
+    Provider<PageController>((ref) => PageController());
 
 class BottomNavigationWidget extends ConsumerWidget {
   const BottomNavigationWidget({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final index = ref.watch(setIndexProvider);
+    final currIndex = ref.watch(setIndexProvider);
+    final pageController = ref.watch(pageControllerProvider);
+
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
@@ -19,16 +23,29 @@ class BottomNavigationWidget extends ConsumerWidget {
               icon: Icon(Icons.directions_bike), label: 'direction'),
           BottomNavigationBarItem(
               icon: Icon(Icons.search_rounded), label: 'search'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings), label: 'Settings'),
         ],
-        currentIndex: index,
+        currentIndex: currIndex,
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
         onTap: (newIndex) {
           ref.read(setIndexProvider.notifier).state = newIndex;
+          pageController.jumpToPage(newIndex);
         },
       ),
-      body: const Center(
-        child: Text('niggers'),
+      body: PageView(
+        controller: pageController,
+        onPageChanged: (newIndex) {
+          ref.read(setIndexProvider.notifier).state = newIndex;
+        },
+        children: const [
+          Center(child: Text('Person Page')),
+          Center(child: Text('Photo Page')),
+          Center(child: Text('Direction Page')),
+          Center(child: Text('Search Page')),
+          Center(child: Text('Settings Page')),
+        ],
       ),
     );
   }
