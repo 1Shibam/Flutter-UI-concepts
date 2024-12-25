@@ -114,7 +114,7 @@ class FormsWidget extends ConsumerWidget {
                                       .state = true;
                                 },
                                 icon: const Icon(Icons.visibility)),
-                        border: OutlineInputBorder(),
+                        border: const OutlineInputBorder(),
                         labelText: 'Password'),
                     validator: (value) {
                       if (value.toString().isEmpty) {
