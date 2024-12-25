@@ -13,6 +13,7 @@ import 'package:flutter_ui_concepts/widgest/forms_widget.dart';
 import 'package:flutter_ui_concepts/widgest/image_widget.dart';
 import 'package:flutter_ui_concepts/widgest/list_grid_view.dart';
 import 'package:flutter_ui_concepts/widgest/stack_widget.dart';
+import 'package:flutter_ui_concepts/widgest/tab_bar_widger.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home:   const StackWidget(),
+      home:   const TabBarWidger(),
     );
   }
 }
