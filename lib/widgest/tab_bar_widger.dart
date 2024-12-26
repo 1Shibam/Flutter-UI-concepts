@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 
 class TabBarWidger extends StatelessWidget {
@@ -29,12 +31,12 @@ class TabBarWidger extends StatelessWidget {
           ),
           body: TabBarView(children: [
             Container(
-              child: Center(
+              child: const Center(
                 child: Text('Songs will be here!!'),
               ),
             ),
             Container(
-              child: Center(
+              child: const Center(
                 child: Text('Playlists will be here!!'),
               ),
             )
