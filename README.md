@@ -1,6 +1,6 @@
 # flutter_ui_concepts
 
-A new Flutter project.
+this is the repository for flutter UI design 
 
 ## Getting Started
 
